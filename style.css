@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins',sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 
 }
 .container{
@@ -13,6 +13,9 @@
     background-position: center;
     padding: 0 8%;
     position: relative;
+}
+p{
+    text-align: center;
 }
 nav{
     display: flex;
@@ -166,6 +169,7 @@ footer img{
     display: block;
     margin: 0px 580px;
 } */
+
 .about-section{
     /* color: white; */
     background: linear-gradient(-45deg,rgb(206 158 182),rgb(29 57 132),rgb(170 106 200),rgb(75 134 174));
@@ -194,7 +198,7 @@ footer img{
     padding: 20px
 }
 .about-section h1{
-    color: white;
+    color: Black;
     font-style: italic;
     display: flex;
     justify-content: center;
@@ -202,8 +206,8 @@ footer img{
     padding: 20px;
 }
 .about-section pre{
-    color: white;
-    font-style: oblique;
+    color: rgb(22, 69, 38);
+    font-style: bold;
     font-size: 40px;
     font-weight: 500;
     margin-left: 450px;
@@ -212,6 +216,7 @@ footer img{
 }
 .about-section h3{
     color: black;
+    
     display: flex;
     align-items: center;
     justify-content: center;
