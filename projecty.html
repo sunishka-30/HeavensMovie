@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projecty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Movie App</title>
+</head>
+<body>
+    
+    <header>
+        <img src="logo.png" alt="" id="logo">
+        <div class="bar">
+            <form  id="form">
+                <input type="search" placeholder="Search" id="search" class="search">
+                <i class="fa fa-search"></i>
+            </form>
+        </div>
+        <div class="navigation">
+  
+            <a class="button" href="index.php?logout='1'">
+              <img src="user.png" alt="user_icon" id="user_icon">
+          
+          <div class="logout">LOGOUT</div>
+        
+            </a>
+          
+        </div>
+    </header>
+    
+    <div id="tags"></div>
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <!-- Overlay content -->
+        <div class="overlay-content" id="overlay-content"></div>
+      
+      </div>
+    <main id="main"> </main>
+
+    <div class="pagination" id="pages">
+        <div class="page" id="prev">Previous Page</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next Page</div>
+    </div>
+
+    <script src="projecty.js"></script>
+</body>
+</html>

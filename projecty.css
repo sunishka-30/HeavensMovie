@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+*{
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    padding:1rem;
+    display:flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    height: 7em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+:root{
+    --primary-color:black;
+    --secondary-color: rgba(22, 87, 117, 0.807);
+}
+  
+#user_icon {
+    width: 20px;
+    border-radius: 50px;
+    float: left;
+    position: relative;
+    right: .05em;
+  }
+  
+  .logout {
+    font-size: .8em;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    right: -15px; 
+    letter-spacing: 3px;
+    opacity: 1;
+  }
+  
+  .button {
+     text-decoration: none;
+     float: right;
+    padding: 12px;
+    margin: 15px;
+    color: white;
+    width: 8em;
+    background-color: black;
+    border-radius: 1em;
+  }
+  
+
+
+body{
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+
+
+
+form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    position: relative;
+    left: 35em;
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+    background-color: black;
+    color: white;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover{
+    width: 300px;
+    cursor: pointer;
+}
+
+form:hover input{
+    display: block;
+}
+
+form:hover .fa{
+    background: #07051a;
+    color: white;
+}
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    height: 37em;
+    margin: 1rem;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px black;
+    background-color: var(--secondary-color);
+    position:relative;
+    overflow: hidden;
+    border-radius: 3em;
+    transition: transform .30s,box-shadow .30s;
+}
+
+.movie:hover
+{
+    transform: translate(1%,-1%);
+    box-shadow: .5em .5em white; 
+}
+
+.movie img{
+    width:100%;
+}
+
+.movie-info{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.movie-info h3{
+    margin-top: 0;
+    font-weight: bold;
+    font-size: larger;
+    /* position: relative; */
+    /* left: 4em; */
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+    /* position: relative; */
+    /* top: 2em;
+    right: 4rem; */
+}
+
+
+.overview{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateY(100%);
+    transition:transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform:translateY(0);
+}
+
+#tags
+{
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+    margin-bottom: 3em;
+}
+.tag{
+    color: white;
+    /* background-image: linear-gradient(to right,#D1913C 0%, #FFD194 51%,#D1913C 100%); */
+    /* background-color: #b08968; */
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    font-size: larger;
+    /* box-shadow: 1px 1px 1px 1px ; */
+    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+    margin: 1em 1em;
+    padding: .5em .5em;
+    border-radius: 1em;
+    cursor: pointer;
+    background-size: 200% auto;
+    transition: transform .01s,box-shadow .3s,background-position .5s;
+}
+.tag:hover{
+    transform: translate(1%,1%);
+    box-shadow: .2em .2em white;
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.tag.highlight
+{
+    background-color: red;
+}
+
+.pagination
+{
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#logo
+{
+    position: relative;
+    left: 5em;
+    border:2px solid black;
+    border-radius: 1.5em;
+
+}
+.page
+{
+    padding: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: .05em;
+}
+
+.page.disabled
+{
+    cursor: not-allowed;
+    color: grey;
+}
+.current
+{
+    padding: 20px 30px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.know-more
+{
+    background-color: orange;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border: 0;
+    border-radius: 2em;
+    padding: .5em .5em;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  .bar
+  {
+    position: relative;
+    right:2em;
+  }
